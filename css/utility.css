@@ -1,0 +1,23 @@
+.vu-select-element {
+    color: #666;
+}
+.vu-select-element:after {
+    position: absolute;
+    left: 10px;
+    content: '';
+    height: 40px;
+    width: 275px;
+    border-bottom: solid 3px #019fb6;
+    
+    -webkit-transform: scaleX(0.0001);
+    -ms-transform: scaleX(0.0001);
+    transform: scaleX(0.0001);
+    
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+}
+.vu-select-element:hover:after {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+} 

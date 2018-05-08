@@ -1,0 +1,31 @@
+.vu-btn{
+    height:100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color:var(--background);
+    padding:0;
+    margin:0;
+}
+.vu-btn:active {
+    -webkit-box-shadow: inset 1px 1px 10px #333;
+    -moz-box-shadow:    inset 1px 1px 10px #333;
+    box-shadow:         inset 1px 1px 10px #333;
+}
+.vu-btn-primary{background-color: var(--primary);color: var(--text-white);}
+.vu-btn-primary:hover{background-color:var(--primary-highlight);}
+.vu-btn-secondary{background-color: var(--secondary);color: var(--text-white);}
+.vu-btn-secondary:hover{background-color:var(--secondary-highlight);}
+.vu-btn-info{background-color:var(--info);}
+.vu-btn-info:hover{background-color:var(--info-highlight);}
+.vu-btn-success{background-color:var(--success);color:var(--text-white);}
+.vu-btn-success:hover{background-color:var(--success-highlight);}
+.vu-btn-warning{background-color:var(--warning);color:var(--white-text) ;}
+.vu-btn-warning:hover{background-color:var(--warning-highlight);}
+.vu-btn-danger{background-color:var(--danger);color:var(--text-white) ;}
+.vu-btn-danger:hover{background-color:var(--danger-highlight);}
+.vu-btn-sm{padding: .3em .6em .3em .6em;}
+.vu-btn-md{padding: .6em 1.2em .6em 1.2em;}
+.vu-btn-lg{padding: .9em 1.8em .9em 1.8em;}
+.vu-btn-wide{width: 100%;}
+ 

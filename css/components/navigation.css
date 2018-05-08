@@ -1,0 +1,96 @@
+/*
+NAVBAR
+*/
+.vu-grid-navbar{
+    display:grid;
+    grid-template-columns: 10% 1fr 20%;
+    grid-template-rows: 1fr;
+    height:100%;
+    justify-content:center;
+    border-bottom: solid 1px #777;
+
+}
+.vu-navbar-brand{
+    display:flex;
+    justify-content:center;
+    border-right: solid 3px var(--primary);
+    text-transform: uppercase;
+    margin:0;
+    align-self:center;
+    height:100%;
+    cursor:pointer;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+.vu-navbar-brand a{
+color: var(--white)
+}
+.vu-navbar-brand:hover{
+    background-color: var(--info);
+
+}
+.vu-navbar-content{
+    display:flex;
+    justify-content:flex-end;
+    margin-right: 2em;
+    margin-left: 2em;
+   
+}
+.vu-navbar-login{
+    display:flex;
+    justify-content:center;
+    border-bottom: solid 1px var(--primary);
+}
+/*
+ACTIONBAR
+*/
+.vu-grid-actionbar{
+    display:grid;
+    grid-template-columns: 10% 1fr 20%;
+    grid-template-rows: 1fr;
+    /* box-shadow: 0 5px 5px 0px #757575; */ /*kept for backup*/
+    border-bottom: solid .1em var(--secondary);
+    box-shadow: 0 5px 10px 0 #757575, 0 4px 5px 0 #a8a8a8;
+
+}
+.vu-domain{
+    display:flex;
+    justify-content:center;
+    border-right: solid 3px var(--primary);
+    text-transform: capitalize;
+
+}
+.vu-actionbar-list{
+    padding-left:.5em;
+    padding-right:.5em;
+}
+.vu-actionbar-list button,
+.vu-subnav a{
+    padding: 0em .5em 0em .5em;
+}
+/*
+SUBNAV
+*/
+.vu-subnav{
+    display:flex;
+    flex-direction:row;
+    padding-left:1em;
+    padding-right:1em;
+    box-shadow: 0 5px 10px 0 #757575, 0 4px 5px 0 #a8a8a8;
+
+}
+.vu-subnav nav a{
+    margin-right: 1em;
+    margin-left:1em;
+}
+.vu-subnav-link{
+    cursor:pointer;
+}
+.vu-subnav-link:hover{
+    
+}
+a {
+	  text-transform: uppercase;
+	  -webkit-transition: .4s color;
+	  transition: .4s color;
+}

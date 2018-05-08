@@ -5,6 +5,9 @@
   <title>Brunch</title>
   <link rel="stylesheet" href="/app.css">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../../../css/components/table.css">
+  <link rel="stylesheet" href="../css/layout.css">
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
   <script src="/vendor.js"></script>
   <script src="/app.js"></script>
@@ -17,7 +20,7 @@
     <hr class="air" />
     <article>
         Square CSS description
-        All the lorem ipsum in the world goes ehre 
+        All the lorem ipsum in the world goes ehre
     </article>
     <hr class="air"/>
 
@@ -202,7 +205,7 @@
         </div>
         <hr class="air" />
         <a href="#top"></a>
-    </section> 
+    </section>
     <!--cards end-->
 
     <!--Align content-->
@@ -277,8 +280,99 @@
     </section>
     <!--Align Items End-->
 
+    <!--Table Start-->
+    <section>
+        <h3>Tables</h3>
+        <p class="air"> Short Info about table</p>
+        <dl class="sq-dl sq-dl-divider">
+            <dt><strong>Classes</strong></dt>
+            <dd><strong>sq-table-striped</strong> - Table line becomes striped</dd>
+            <dd><strong>sq-table-border</strong> - Bordered table</dd>
+            <dd><strong>sq-table-hover</strong> - Hover over Table</dd>
+            <dd><strong>sq-table-misc</strong> - Misc items to the table. Add Misc icon.</dd>
+        </dl>
+        <!--table visual-->
+        <table class="sq-table-striped sq-table-border sq-table-hover sq-table-border-bottom sq-table-misc-arrow-up">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Name1</td>
+                <td>30</td>
+                <td>Norway</td>
+            </tr>
+            <tr>
+                <td>Name2</td>
+                <td>40</td>
+                <td>Denmark</td>
+            </tr>
+            <tr>
+                <td>Name3</td>
+                <td>55</td>
+                <td>Sweden</td>
+            </tr>
+        </table>
+
+        <!--code field-->
+        <pre class="code1">
+            <code>
+        &ltdiv class="sq-table-striped sq-table-hover sq-table-border-bottom" &gt
+                    ...add content/text+++...
+        &lt/div&gt
+            </code>
+        </pre>
+
+        <!--link to codepen-->
+        <a href="https://codepen.io/bjornum/pen/KRqeeP?editors=1100">Interactive Demo</a>
+        <hr class="air"/>
+        <a href ="#top"></a>
+    </section>
+	<section>
+		<!--Radio Start-->
+		<h3 id="Radio Buttons">Radio Buttons</h3>
+			<p>Basic radio buttons and checkboxes</p>
+			<dd><strong>.sq-buttons input</strong> - Main class for Radiobuttons and Checkboxes</dd>
+			<dd><strong>type="select"</strong> - Selectionbox, you need to put &ltoptions&gt inside this</dd>
+			<dd><strong>type="checkbox"</strong> - Standard Checkbox</dd>
+			<dd><strong>type="checkbox" checked</strong> - Checkbox already checked when page is loading</dd>
+			<dd><strong>type="checkbox" disabled</strong> - Checkbox disabled, makes it impossible to press this box</dd>
+			<dd><strong>type="radio"</strong> Standard Radiobutton</dd>
+			<dd><strong>type="radio" checked</strong> Radiobutton already checked when page is loading</dd>
+			<dd><strong>type="radio" disabled</strong> Radiobutton is disabled</dd>
+			<dd><strong>Radiobuttons in a single block has to share name</strong></dd>
+			    <!--radio buttons visual-->
+<p>Selection List</p>
+	<select>
+		<option value="">Test1</option>
+		<option value="">Test2</option>
+		<option value="">Test3</option>
+	</select>
+	<p>Checkbox</p>
+		<div class="sq-buttons"><input type="checkbox" disabled="disabled" name="ord" value="">Disabled checkbox
 
 
+		<input type="checkbox" name="ord" value="">Checkable box
+		<input type="checkbox" checked="checked" name="ord" value="">Checked when page loads
+	</div>
+<p>Radiobuttons</p>
+		<input type="radio" checked="checked" name="test" value="test">Checked when page loads
+		<input type="radio"  name="test" value="">Test
+		<input type="radio" disabled="disabled" name="test" value="">Disabled button
+		<!--code field-->
+		<pre class="code1">
+			<code>
+		&ltdiv class="sq-table-striped sq-table-hover sq-table-border-bottom" &gt
+					...add content/text+++...
+		&lt/div&gt
+			</code>
+		</pre>
+		<!--link to codepen-->
+		<a href="https://codepen.io/MrJohns1/pen/VxyvJX">Interactive Demo</a>
+		<hr class="air"/>
+		<a href ="#top"></a>
+	</section>
 
     <!-- <section> -->
     <!-- <h3 id="Layouy">Layout</h3> -->
@@ -294,4 +388,4 @@
     <!-- </div> -->
     <!-- <hr class="air" /> -->
     <!-- <a href="#top"></a> -->
-    <!-- </section> --> 
+    <!-- </section> -->
