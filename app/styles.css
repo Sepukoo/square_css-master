@@ -70,22 +70,6 @@
 }
 
 /*End of Justify Content Classes*/
-
-/*replaced the .code from list.css*/
-.code1{
-	background-color:lightgrey;
-	border-left:solid 3px black;
-    padding-left: 1em;
-}
-
-.code2{
-	background-color:lightgrey;
-	border-left:solid 3px black;
-    padding-left: 1em;
-    width: 500px;
-    margin: 50px;
-}
-
 /* Start of Align Items classes*/
 
 .sq-align-center{
