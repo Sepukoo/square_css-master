@@ -10,7 +10,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 }
 .sq-collapsible:after {
-    content: '+';
+    content:'\002B' ;
     float: right;
     margin-left: .4em;
 }
@@ -28,8 +28,7 @@
 
 }
 .sq-collapsed:after {
-    content: '-';
+    content: '\2212';
 
 }
 
- 

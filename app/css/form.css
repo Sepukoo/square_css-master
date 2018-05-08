@@ -49,7 +49,7 @@ textarea {
 	  -moz-box-shadow: 0 10px 6px -6px var(--grey);
 	  box-shadow: 0 10px 6px -6px var(--grey);
     outline: 0;
-    border: solid .12em var(--primary)
+    border-bottom: solid .1em var(--primary);
 }
 .sq-form input:optional {
     border-left-color: var(--info);
