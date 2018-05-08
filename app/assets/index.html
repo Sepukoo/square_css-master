@@ -4,14 +4,16 @@
   <meta name="viewport" content="width=device-width">
   <title>Brunch</title>
   <link rel="stylesheet" href="/app.css">
+<<<<<<< HEAD
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/form.css">
   <link rel="stylesheet" href="../../../css/components/table.css">
   <link rel="stylesheet" href="../css/layout.css">
+=======
+>>>>>>> upstream/master
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
   <script src="/vendor.js"></script>
   <script src="/app.js"></script>
-  <script>require('initialize');</script>
 </head>
 <body class="container">
 
@@ -35,6 +37,10 @@
         <dd><a href="#forms">Forms</a></dd>
         <dd><a href="#grid">g</a></dd>
         <dd><a href="#grid">grid</a></dd>
+        <dd><a href="#utility">Utility</a></dd>
+        <dd><a href="#collapsible">Collapsible</a></dd>
+        <dd><a href="#typography">Typography</a></dd>
+        <dd><a href="#modaltabs">Modal and Tabs</a></dd>
     </dl>
 
     <hr/>
@@ -109,9 +115,9 @@
     <div class="air">
         <pre class="code" >
             <code>
-                &ltdiv class="sq-grid-main-desktop sq-grid-gap"&gt
-                    ...Add panels here...
-                &lt/div&gt
+&ltdiv class="sq-grid-main-desktop sq-grid-gap"&gt
+    ...Add panels here...
+&lt/div&gt
             </code>
         </pre>
     </div>
@@ -152,17 +158,17 @@
         </div>
         <pre class="code">
             <code>
-            &ltdiv class="sq-grid-main-desktop sq-grid-gap" &gt
-                &ltdiv class="sq-panel sq-panel-main sq-warning"&gt
-                    main
-                &lt/div&gt
-                &ltdiv class="sq-panel sq-panel-main-top sq-success"&gt
-                    top overlays main panel by being rendered after use z index to change
-                &lt/div&gt
-                &ltdiv class="sq-panel sq-panel-main-bottom sq-info"&gt
-                    bottom overlays main panel by being rendered after use z index to chang
-                &lt/div&gty
-            &lt/div&gt
+&ltdiv class="sq-grid-main-desktop sq-grid-gap" &gt
+    &ltdiv class="sq-panel sq-panel-main sq-warning"&gt
+        main
+    &lt/div&gt
+    &ltdiv class="sq-panel sq-panel-main-top sq-success"&gt
+        top overlays main panel by being rendered after use z index to change
+    &lt/div&gt
+    &ltdiv class="sq-panel sq-panel-main-bottom sq-info"&gt
+        bottom overlays main panel by being rendered after use z index to chang
+    &lt/div&gty
+&lt/div&gt
             </code>
         </pre>
 
@@ -280,6 +286,300 @@
     </section>
     <!--Align Items End-->
 
+<<<<<<< HEAD
+=======
+    
+    <!-- Utility Classes Start-->
+
+<section>    
+    <H3 id="utility">Utility</H3>
+    <p>Utility classes can be used to created margin, padding and borders <br>
+    <strong>Important!:</strong> Border-style classes can only be added on sq-border-1, 3 or 5.</p>
+    <dl class="sq-dl sq-dl-divider">
+        <dt>Classes</dt>
+        <dd><strong>sq-air-y-05</strong> - Creates margin on the top and bottom. (0.5em, 1em,2em,3em,4em & 5em)</dd>
+        <dd><strong>sq-air-x-05</strong> - Creates margin on the left and right.</dd>
+        <dd><strong>sq-margin-05</strong>- Creates margin on all sides.</dd> 
+        <dd><strong>sq-mt-05 / sq-mb-05</strong>- Creates margin only on top (-mt) or bottom (-mb).</dd> 
+        
+        <dd><strong>sq-padding-05</strong> - Creates padding on all sides. (0.5em, 1em,2em,3em,4em & 5em)</dd> 
+        <dd><strong>sq-l-padding-05 / sq-r-padding-05</strong> - Creates padding only on the left / right. <strong>(Solid only)</strong> </dd>
+        <dd><strong>sq-t-padding-05 / sq-b-padding-05</strong> - Creates padding only on top / bottom. <strong>(Solid only)</strong></dd>
+        
+        <dd><strong>sq-border-1</strong> - Creates a border on all four sides. (1px, 3px, 5px)</dd>
+        <dd><strong>sq-t-border / sq-b-border</strong> - Creates a border only on top / bottom. <strong>(Solid only)</strong> </dd>
+        <dd><strong>sq-l-border / sq-r-border</strong> - Creates a border only on the left / right. <strong>(solid only)</strong></dd>
+        <dd><strong>sq-dashed (Border styles)</strong> - Changes the borderstyle (solid is default), (sq-dashed, dotted, groove, none, inherit or ridge)</dd>
+    </dl>
+        <a href="https://codepen.io/Pauble95/pen/YLxxBq">Interactive Demo</a>
+    <a href="#top"></a>
+</section>
+    <!-- Utility End -->
+    <!-- Collapsible Start -->
+<section>
+    <h3 id="collapsible">Collapsible</h3>
+    <p>..You can place different tags and content within a collapsible.<br>
+    <strong>Note that</strong> the dropdown is a JS function 
+    which can be found in "vendor/collapsible.js"</p>
+
+    <dl class="sq-dl sq-dl-divider">
+        
+    <dt>Collapsible class</dt>
+        <button class="sq-collapsible">Collapsible</button>
+        <div class="sq-collapsible-content">
+            <p>Text in "p" tag here</p>
+            <button>"button" tag here</button>
+            <div> Text "div" tag here</div>
+            <span>Text "span" tag here</span>
+        </div>  <br>
+
+        <button Class="sq-collapsible" style="background-color:orangered">
+            Collapsible colored</button>
+        <div class="sq-collapsible-content" style="background-color:orange">
+            <p>This collapsible is colored</p>
+        </div>  <br>
+    
+
+    <div class="air">
+    <pre class="code">
+        <code>
+        &ltbutton class="sq-collapsible"&gt &lt/button&gt
+            &ltdiv class="sq-collapsible-content"&gt
+                &ltp Text in "p" tag here &gt&ltp
+                &ltbutton&gt"button" here&lt/button&gt
+                &ltdiv&gt Text in "div" tag here&ltdiv&gt
+                &ltspan&gt Text in "span" tag here&ltspan&gt
+            &ltdiv&gt
+        </code>
+    </pre>
+    </div>     
+       
+    </dl>
+    <a href="#top"></a>
+</section>
+    <!-- Collapsible END -->
+    <!-- Typography START -->
+
+<section>
+<h3 id="typography">Typography</h3>
+<p>Examples and info about Typography classes</p>
+
+<dt class="sq-dl sq-dl-divider">
+<!--  Font Classes  -->
+<dt>Font classes</dt>
+    <dd><strong>sq-bold</strong> - Makes your text bold.</dd>    
+    <dd><strong>sq-sans-serif</strong> - Changes your font to sans-serif.</dd>
+    <dd><strong>sq-cursive</strong> - Makes your text cursive.</dd>
+    <dd><strong>sq-fantasy</strong> - Makes your text look thicker and bolder.</dd>
+<br>
+<!-- Text sizing -->
+<dt>Text Size classes</dt>
+    <dd><strong>sq-text-small</strong> - Makes your text look smaller.</dd>
+    <dd><strong>sq-text-large</strong> - Makes your text look bigger.</dd>
+<br>
+<!-- Colored text -->
+<dt>Colored Text</dt>
+    <dd class="sq-text-muted"><strong>sq-text-muted</strong> - Changes your text color to "Muted"</dd>
+    <dd class="sq-text-success"><strong>sq-text-success</strong> - Changes your text color to "Success"</dd>
+    <dd class="sq-text-warning"><strong>sq-text-warning</strong> - Changes your text color to "Warning!"</dd>
+    <dd class="sq-text-danger"><strong>sq-text-danger</strong> - Changes your text color to "Danger!"</dd>
+<br>
+<!--  Text Tranform-modifiers  -->
+<dt>Text Tranform-modifiers</dt>
+    <dd><strong>sq-text-uppercase</strong> - All letters will appear in uppercase.</dd>
+    <dd><strong>sq-text-lowercase</strong> - All letters will appear in lowercase.</dd>
+    <dd><strong>sq-text-capitalize</strong> - First letter will appear as a uppercase letter.</dd>
+    <dd><strong>Dropcaps</strong> - Makes first letter bigger than the rest of the text,
+        see <a href="https://codepen.io/Pauble95/pen/odoPvq">here</a> for demo.
+        <strong>Note That</strong> you might have to do some adjustments to the CSS.</dd>
+<br>
+<!--Text-Decoration Lines-->
+<dt>Text-Decoration Lines</dt>
+    <dd class="sq-overline"><strong>sq-overline</strong> - Creates a overline above your text.</dd>
+    <dd class="sq-linetrough"><strong>sq-linethrough</strong> - Creates a line through your text.</dd>
+    <dd class="sq-underline"><strong>sq-underline</strong> Creates a line under your text.</dd>
+</dt> <br>   <!--Interactive demo-->
+<div><a href="https://codepen.io/Pauble95/pen/jxavZV">Interactive demo</a></div>
+
+<a href="#top"></a>
+</section>
+    <!-- Typography END -->
+
+    <!--Colors start-->
+    <section>
+        <h3>colors</h3>
+   <p class="air"> The color variables are found at the top, inside the theme-default.css. <br>
+    <hr> 
+       Short Info about color classes. 
+   </p>
+   <dl class="sq-dl sq-dl-divider">
+       <dt>Classes</dt>
+       <dd class="sq-text-base"><strong>sq-text-base</strong> - This variable is using the base text color.</dd>
+       <dd class="sq-text-white"><strong>sq-text-white</strong> - This variable is using the white text color. Added black background color since text color is white.</dd>
+       <dd class="sq-primary"><strong>sq-primary</strong> - This variable is using white text and the primary background color.</dd>
+       <dd class="sq-primary-highlight"><strong>sq-primary-highlight</strong> - This is using the primary highlight variable, ment for highlighting  objects.</dd>
+       <dd class="sq-secondary"><strong>sq-secondary</strong> - This variable is using white text and the secondary background color.</dd>
+       <dd class="sq-secondary-highlight"><strong>sq-secondary-highlight</strong> - This is using the secondary highlight variable, ment for highlighting  objects.</dd>
+       <dd class="sq-success"><strong>sq-success</strong> - This variable is using white text and the success background color.</dd>
+       <dd class="sq-success-highlight"><strong>sq-success-highlight</strong> - This is using the success highlight variable, ment for highlighting  objects.</dd>
+       <dd class="sq-info"><strong>sq-info</strong> - this variable is using white text and the info background color.</dd>
+       <dd class="sq-info-highlight"><strong>sq-info-highlight</strong> - This is using the info highlight variable, ment for highlighting objects.</dd>
+       <dd class="sq-warning"><strong>sq-warning</strong> - This variable is using white text and the warning background color.</dd>
+       <dd class="sq-warning-highlight"><strong>sq-warning-highlight</strong> - This is using the warning highlight variable, ment for highlighting  objects.</dd>
+       <dd class="sq-danger"><strong>sq-danger</strong> - This variable is using white text and the danger background color.</dd>
+       <dd class="sq-danger-highlight"><strong>sq-danger-highlight</strong> - This is using the danger highlight variable, ment for highlighting objects.</dd>
+       <dd class="sq-background"><strong>sq-background</strong> - This variable is using the background color.</dd>
+       <dd class="sq-background-secondary"><strong>sq-background-secondary</strong> - This variable is using the secondary background color.</dd>
+       <dd class="sq-black"><strong>sq-black</strong> - This variable is using the black text color.</dd>
+       <dd class="sq-grey"><strong>sq-grey</strong> - This variable is using the grey text color.</dd>
+       <dd class="sq-white"><strong>sq-white</strong> - This variable is using the white background color.</dd>
+       <dd class="sq-muted"><strong>sq-muted</strong> - This variable is using the muted text color.</dd>
+       <dd class="sq-muted-highlight"><strong>sq-muted-highlight</strong> - This is using the muted highlight variable, ment for highlighting muted objects.</dd>
+       <dd class="sq-divider"><strongs>sq-divider</strong> - This is using the divider variable, ment for changing color on for example an hr tag.</dd>
+   </dl>
+<hr>
+   <p> <h3>Here are the variable names if you want to change or make new color themes.</h3>
+    The color variables are at the top, inside the theme-default.css. <br>
+    --text-base: #333; <br>
+    --text-white: #fafafa; <br>
+    --primary: #0088ce; <br>
+    --primary-highlight: #39a5dc; <br>
+    --secondary: #393f44; <br>
+    --secondary-highlight: #72767b; <br>
+    --background: #fafafa; <br>
+    --background-secondary: #ededed; <br>
+    --success: #3f9c35; <br>
+    --success-highlight: #9ecf99; <br>
+    --info: #007a87; <br>
+    --info-highlight: #7dbdc3; <br>
+    --warning: #ec7a08; <br>
+    --warning-highlight: #f39d3c; <br>
+    --danger: #b30000; <br>
+    --danger-highlight: #cc0000; <br>
+    --black: #0c0c0c; <br>
+    --grey: #777; <br>
+    --white: #fafafa; <br>
+    --muted: #999; <br>
+    --muted-highlight: #666; <br>
+    --divider: #d8d8d8; <br>
+   </p>
+   <pre class="code2">
+        <code>
+            &ltdiv class="sq-primary" &gt
+                ...add content/text+++...
+            &lt/div&gt
+        </code>
+    </pre>
+    <div>
+            <a href="https://codepen.io/Sepuko/pen/xjrzKw?editors=1100#0">Interactive Demo</a>
+        </div>
+
+    </section>
+    <!--Colors end-->
+
+    <!--Modal and tabs start-->
+    <section>
+        <h3>Modal and Tabs</h3>
+        <p class="air">Short Info about Modal and tabs</p>
+        <dl class="sq-dl sq-dl-divider">
+
+    <p><strong>Modal window and tabs</strong> <br>Add Overlay Window and tabs</p>
+
+  <dl>
+    <dt> <strong>Classes</strong></dt>
+    <dd><strong>sq-modal</strong> - Adds a hidden modal window</dd>
+    <dd><strong>sq-modal-content</strong> - Content of the modal window</dd>
+    <dd><strong>sq-close-button</strong> - Adds a close button to the modal window</dd>
+    <dd><strong>sq-close-button:hover</strong> - Highlights close button on hover</dd>
+    <dd><strong>sq-show-modal</strong> -  Shows the modal window</dd>
+    <dd><strong>sq-tabs</strong> - Adds layout for the tabs</dd>
+    <dd><strong>sq-tabs-label</strong> - Orders the tabs and styles the tab buttons</dd>
+    <dd><strong>sq-tabs-input</strong> - Adds a radio class to the tabs and styles them</dd>
+  </dl>
+
+  <pre class="code1">
+    <code>
+                &ltdiv class="sq-modal-content"/"sq-tabs" &gt
+                      ...add content/text+++...
+                &lt/div&gt
+    </code>
+  </pre>
+
+  <div>
+    <a href="https://codepen.io/tom_ra/pen/LmOyJG">Interactive Demo</a>
+</div>
+
+
+	<section>
+	<h3 id="forms">Forms / input fields</h3>
+	<p class="air">
+		forms are are for allowing the user to input various forms of information to be passed along by scripts etc.
+		forms are scoped under the class sq-form, and styling can be changed in the form.css.
+	</p>
+	<dl class="sq-dl sq-dl-divider" >
+	<dt>CSS elements</dt>
+	<dd><strong>.sq-form</strong> - used to limit the scope of the form styling.</dd>
+	<dd><strong>Fieldset</strong> - tag used for grouping together elements within the form.</dd>
+	<dd><strong>Legend</strong> - tag works as a headline for the elements within the fieldset.</dd>
+	<dd><strong>Form</strong> - Root element for forms,insert .sq-form to add form scope.</dd>
+	<dd><strong>Label</strong> - Label tag used to label each input field.</dd>
+	<dd><strong>Input</strong> - Input fields used to gather user information.</dd>
+	</dl>
+	<p>Example: name and date form elements</p>
+	<div>
+		<form class="sq-form" action="index.html" method="post" type=text>
+			<fieldset>
+				<legend>Personalia</legend>
+				<label>First Name</label>
+				<input type="text" name="" value="" placeholder="First name">
+				<label>Last name</label>
+				<input type="text" name="" value="" placeholder="Last name">
+				<label>Date of birth</label>
+				<input type="date" name="" value="">
+			</fieldset>
+		</form>
+	</div>
+	<pre class="code1 air">
+		<code>
+&ltform class="sq-form" action="index.html" method="post" type=text&gt
+	&ltfieldset>
+		&ltlegend&gtPersonalia&lt/legend&gt
+		&ltlabel&gtFirst Name&lt/label&gt
+		&ltinput type="text" name="" value="" placeholder="First name"&gt
+		&ltlabel&gtLast name&lt/label&gt
+		&ltinput type="text" name="" value="" placeholder="Last name"&gt
+		&ltlabel&gtDate of birth&lt/label&gt
+		&ltinput type="date" name="" value=""&gt
+	&lt/fieldset&gt
+&lt/form&gt
+		</code>
+	</pre>
+	<p>Example: login form elements</p>
+	<form class="sq-form" action="index.html" method="post">
+		<fieldset>
+			<legend>Login</legend>
+			<input type="email" name="" value="" placeholder="E-mail">
+			<input type="password" name="" value="" placeholder="Password">
+		</fieldset>
+	</form>
+	<pre class="code1 air">
+		<code>
+&ltform class="sq-form" action="index.html" method="post"&gt
+	&ltfieldset&gt
+		&ltlegend&gtLogin&lt/legend&gt
+		&ltinput type="email" name="" value="" placeholder="E-mail"&gt
+		&ltinput type="password" name="" value="" placeholder="Password"&gt
+	&lt/fieldset&gt
+&lt/form&gt
+		</code>
+	</pre>
+	<hr class="air" />
+	<a href="#top"></a>
+	</section>
+<!-- End forms -->
+
+
+>>>>>>> upstream/master
     <!--Table Start-->
     <section>
         <h3>Tables</h3>
@@ -329,6 +629,7 @@
         <hr class="air"/>
         <a href ="#top"></a>
     </section>
+<<<<<<< HEAD
 	<section>
 		<!--Radio Start-->
 		<h3 id="Radio Buttons">Radio Buttons</h3>
@@ -351,6 +652,9 @@
 	</select>
 	<p>Checkbox</p>
 		<div class="sq-buttons"><input type="checkbox" disabled="disabled" name="ord" value="">Disabled checkbox
+=======
+    <!--table End-->
+>>>>>>> upstream/master
 
 
 		<input type="checkbox" name="ord" value="">Checkable box
@@ -388,4 +692,11 @@
     <!-- </div> -->
     <!-- <hr class="air" /> -->
     <!-- <a href="#top"></a> -->
+<<<<<<< HEAD
     <!-- </section> -->
+=======
+
+    <!-- </section> --> 
+</body>
+
+>>>>>>> upstream/master
