@@ -26,3 +26,7 @@ node_modules/
 
 # Brunch output folder.
 public/
+
+# Specific files
+package-lock.json
+package.json

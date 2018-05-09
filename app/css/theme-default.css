@@ -4,6 +4,7 @@
     --primary: #0088ce;
     --primary-highlight: #39a5dc;
     --secondary: #393f44;
+    --secondary-transparancy: #393f44dd;
     --secondary-highlight: #72767b;
     --background: #fafafa;
     --background-secondary: #ededed;
@@ -39,7 +40,11 @@
 .sq-secondary{
     color: var(--text-white);
     background-color: var(--secondary);
-}
+}    
+.sq-secondary-transparancy{
+    background-color: var(--secondary-transparancy);
+}    
+
 .sq-secondary-highlight{
     background-color: var(--secondary-highlight);
 }
@@ -96,3 +101,27 @@
     color: var(--divider);
 }
 
+/*misc*/
+.sq-background-black{
+    background-color: var(--black);
+}
+
+.sq-background-grey{
+    background-color: var(--grey);
+}
+
+.sq-background-lightgrey{
+    background-color: var(--muted);
+}
+
+.sq-background-lightblue{
+    background-color: var(--info-highlight);
+}
+
+.sq-background-green{
+    background-color: var(--success);
+}
+
+.sq-background-red{
+    background-color: var(--danger-highlight);
+}

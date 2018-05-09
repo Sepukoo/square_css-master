@@ -194,3 +194,6 @@
     /* TEST-BORDER*/
 .sq-b-test{border: 1px solid;}
 
+
+    /*Misc*/
+.sq-border-collapse {border-collapse:collapse;}

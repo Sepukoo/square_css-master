@@ -4,18 +4,12 @@
   <meta name="viewport" content="width=device-width">
   <title>Brunch</title>
   <link rel="stylesheet" href="/app.css">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../css/theme-default.css">
-  <link rel="stylesheet" href="../css/shadow.css">
-=======
->>>>>>> upstream/master
+
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
   <script src="/vendor.js"></script>
   <script src="/app.js"></script>
 </head>
 <body class="container">
-
     <!-- about and Toc start -->
     <h1>Square CSS Documentation</h1>
     <hr class="air" />
@@ -24,7 +18,6 @@
         All the lorem ipsum in the world goes ehre
     </article>
     <hr class="air"/>
-
     <dl class="sq-dl sq-dl-divider air">
         <dt>Table of Content</dt>
         <dd><a href="#colors">Colors</a></dd>
@@ -41,12 +34,18 @@
         <dd><a href="#typography">Typography</a></dd>
         <dd><a href="#shadows">Shadows</a></dd>
         <dd><a href="#modaltabs">Modal and Tabs</a></dd>
+        <dd><a href="#table">Table</a></dd>
+        <dd><a href="#progressBar">progressBar</a></dd>
+        <dd><a href="#slidingUnderline">Sliding Underline</a></dd>
+		<dd><a href="#radiobuttons">Radio Buttons</a></dd>
+		<dd><a href="#responsive">Responsive Design</a></dd>
+        <dd><a href="#navbarLinks">Navbar dropdown menu</a></dd>
+        <dd><a href="#chartist">Chartlist</a></dd>
+        <dd><a href="#animations">Animations</a></dd>
     </dl>
-
     <hr/>
-
     <!-- about and Toc end  -->
-<!-- Layout start -->
+	<!-- Layout start -->
     <h1 id="#layout">Layout</h1>
     <section>
     <h3 id="Layout">Grid</h3>
@@ -54,7 +53,6 @@
         Base Layout system. contains a base 5 row and 9 column grid <br/>
         the grid accepts panels that works as logical separator between content <br/>
         the panels contain other cards with content. <br/>
-
     </p>
     <dl class="sq-dl sq-dl-divider">
         <dt>Classes</dt>
@@ -128,7 +126,6 @@
     <a href="#top"></a>
     </section>
     <!-- Layout end -->
-
     <!-- panel start -->
     <section>
         <h3 id="panels">Panels</h3>
@@ -171,12 +168,10 @@
 &lt/div&gt
             </code>
         </pre>
-
         <hr class="air" />
         <a href="#top"></a>
     </section>
     <!--panel end-->
-
     <!--cards start-->
     <section>
         <h3 id="cards">Cards</h3>
@@ -192,9 +187,9 @@
                 <div class="sq-info">
                     header
                 </div>
-                                <div>
-                    default card contains header body and footer
-                </div>
+                	<div>
+                    	default card contains header body and footer
+                	</div>
                 <div class="sq-warning">
                     footer
                 </div>
@@ -207,16 +202,14 @@
                     header
                 </div>
             </div>
-
         </div>
         <hr class="air" />
         <a href="#top"></a>
     </section>
     <!--cards end-->
-
     <!--Align content-->
     <section>
-        <h1>Align content</h1>
+        <h1 id="Align Content">Align content</h1>
         <p class="air"> CSS to help position the element in HTML</p>
         <!--Justify Content Start-->
         <h3>Justify Content</h3>
@@ -236,7 +229,7 @@
                 <div class="sq-aligning-box"></div>
             </div>
         </div>
-        <pre class="code1">
+        <pre class="code">
             <code>
                 &ltdiv class="sq-justify-center sq-justify-around" &gt
                     ...add content/text+++...
@@ -250,9 +243,7 @@
         <a href="#top"></a>
     </section>
     <!--Justify Content End-->
-
     <!--Align Items Start-->
-
     <section>
         <h3>Align Items</h3>
         <p class="air"> Short Info om Align Items</p>
@@ -271,7 +262,7 @@
                 <div class="sq-aligning-box"></div>
             </div>
         </div>
-        <pre class="code1">
+        <pre class="code">
             <code>
                 &ltdiv class="sq-align-center" &gt
                     ...add content/text+++...
@@ -286,10 +277,78 @@
     </section>
     <!--Align Items End-->
 
-    
+    <!-- Nav dropdown menu start -->
+    <section>
+      <h3 id="nav-dropdown">Nav dropdown menu</h3>
+        <p>
+          Code used to transform the links on a navbar into a icon with a dropdown menu when the window is made smaller.<br>
+          To use as dropdown menu without the resize function simply use the classes <strong>NOT</strong> includeing <ins>window.addEventListener</ins> in JS and sq-nav-dropdown <ins>display:none;</ins>.<br>
+          To edit the width and height sizeing when the dropdown menu appears simply go to window.addEventListener function and change window.innerWidght and window.innerHeight numbers.
+        </p>
+        <dl class="sq-dl sq-dl-divider" >
+          <dt>Classes</dt>
+          <dd><strong>.sq-nav-dropbtn</strong>The button with onclick to toggle hide/show dropdown menu links.</dd>
+          <dd><strong>.sq-nav-dropdown</strong>The main dropdown container containing the button and dropdwon content div.</dd>
+          <dd><strong>.sq-nav-dropdown-content</strong>Containing the actual links for the dropdown menu.</dd>
+          <dd><strong>.sq-nav-dropdown ul</strong>CSS only class, removeing list style,margin and adding paddin 0.3rem.</dd>
+          <dd><strong>.sq-nav-dropdown-content a:hover</strong>CSS only class, adding background color when hovering links within the container.</dd>
+          <dd><strong>.sq-nav-dropbtn:hover</strong>CSS only class, adding background color when hovering the toggle button.</dd>
+          <dd><strong>function showDropContent()</strong>Function which toggle show/hide on the dropdown menu content.</dd>
+          <dd><strong>window.addEventListener("resize",function())</strong>Function which swap out the navbar links to a dropdown menu when the window is made smaller.</dd>
+        </dl>
+        <div>
+          <div id="navbarLinks">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+          </div>
+          <div id="navbarDropLinks" class="sq-nav-dropdown">
+            <svg onclick="showDropContent()"
+              class="sq-nav-dropbtn sq-secondary" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+            </svg>
+            <div class="sq-nav-dropdown-content sq-background-secondary">
+              <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <pre class="code">
+          <code>
+            &ltdiv id="navbarDropLinks" class="sq-nav-dropdown"&gt
+              &ltsvg onclick="showDropContent()"
+              class="sq-nav-dropbtn sq-secondary" viewBox="0 0 32 32" width="32" height="32" fill="none"
+              stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"&gt
+              &ltpath d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24"/&gt
+              &lt/svg&gt
+              &ltdiv class="sq-nav-dropdown-content sq-background-secondary"&gt
+                &ltul&gt
+                  &ltli&gt&lta href="#"&gtLink 1&lt/a&gt&lt/li&gt
+                  &ltli&gt&lta href="#"&gtLink 2&lt/a&gt&lt/li&gt
+                  &ltli&gt&lta href="#"&gtLink 3&lt/a&gt&lt/li&gt
+                &lt/ul&gt
+              &lt/div&gt
+            &lt/div&gt
+          </code>
+        </pre>
+      <div>
+        <a href="https://codepen.io/paalk93/pen/odpJOQ">Interactive Demo</a>
+      </div>
+        <hr class="air" />
+        <a href="#top">Top</a>
+      </section>
+<!-- Nav dropdown menu end -->
+
+
+
+
     <!-- Utility Classes Start-->
 
-<section>    
+
+<section>
     <H3 id="utility">Utility</H3>
     <p>Utility classes can be used to created margin, padding and borders <br>
     <strong>Important!:</strong> Border-style classes can only be added on sq-border-1, 3 or 5.</p>
@@ -297,13 +356,13 @@
         <dt>Classes</dt>
         <dd><strong>sq-air-y-05</strong> - Creates margin on the top and bottom. (0.5em, 1em,2em,3em,4em & 5em)</dd>
         <dd><strong>sq-air-x-05</strong> - Creates margin on the left and right.</dd>
-        <dd><strong>sq-margin-05</strong>- Creates margin on all sides.</dd> 
-        <dd><strong>sq-mt-05 / sq-mb-05</strong>- Creates margin only on top (-mt) or bottom (-mb).</dd> 
-        
-        <dd><strong>sq-padding-05</strong> - Creates padding on all sides. (0.5em, 1em,2em,3em,4em & 5em)</dd> 
+        <dd><strong>sq-margin-05</strong>- Creates margin on all sides.</dd>
+        <dd><strong>sq-mt-05 / sq-mb-05</strong>- Creates margin only on top (-mt) or bottom (-mb).</dd>
+
+        <dd><strong>sq-padding-05</strong> - Creates padding on all sides. (0.5em, 1em,2em,3em,4em & 5em)</dd>
         <dd><strong>sq-l-padding-05 / sq-r-padding-05</strong> - Creates padding only on the left / right. <strong>(Solid only)</strong> </dd>
         <dd><strong>sq-t-padding-05 / sq-b-padding-05</strong> - Creates padding only on top / bottom. <strong>(Solid only)</strong></dd>
-        
+
         <dd><strong>sq-border-1</strong> - Creates a border on all four sides. (1px, 3px, 5px)</dd>
         <dd><strong>sq-t-border / sq-b-border</strong> - Creates a border only on top / bottom. <strong>(Solid only)</strong> </dd>
         <dd><strong>sq-l-border / sq-r-border</strong> - Creates a border only on the left / right. <strong>(solid only)</strong></dd>
@@ -317,11 +376,10 @@
 <section>
     <h3 id="collapsible">Collapsible</h3>
     <p>..You can place different tags and content within a collapsible.<br>
-    <strong>Note that</strong> the dropdown is a JS function 
+    <strong>Note that</strong> the dropdown is a JS function
     which can be found in "vendor/collapsible.js"</p>
-
     <dl class="sq-dl sq-dl-divider">
-        
+
     <dt>Collapsible class</dt>
         <button class="sq-collapsible">Collapsible</button>
         <div class="sq-collapsible-content">
@@ -330,17 +388,14 @@
             <div> Text "div" tag here</div>
             <span>Text "span" tag here</span>
         </div>  <br>
-
         <button Class="sq-collapsible" style="background-color:orangered">
             Collapsible colored</button>
         <div class="sq-collapsible-content" style="background-color:orange">
             <p>This collapsible is colored</p>
         </div>  <br>
-    
 
-    <div class="air">
     <pre class="code">
-        <code>
+      <code>
         &ltbutton class="sq-collapsible"&gt &lt/button&gt
             &ltdiv class="sq-collapsible-content"&gt
                 &ltp Text in "p" tag here &gt&ltp
@@ -350,22 +405,20 @@
             &ltdiv&gt
         </code>
     </pre>
-    </div>     
-       
+    </div>
+
     </dl>
     <a href="#top"></a>
 </section>
     <!-- Collapsible END -->
     <!-- Typography START -->
-
 <section>
 <h3 id="typography">Typography</h3>
 <p>Examples and info about Typography classes</p>
-
 <dt class="sq-dl sq-dl-divider">
 <!--  Font Classes  -->
 <dt>Font classes</dt>
-    <dd><strong>sq-bold</strong> - Makes your text bold.</dd>    
+    <dd><strong>sq-bold</strong> - Makes your text bold.</dd>
     <dd><strong>sq-sans-serif</strong> - Changes your font to sans-serif.</dd>
     <dd><strong>sq-cursive</strong> - Makes your text cursive.</dd>
     <dd><strong>sq-fantasy</strong> - Makes your text look thicker and bolder.</dd>
@@ -402,12 +455,12 @@
 <a href="#top"></a>
 </section>
     <!-- Typography END -->
-    <!--Colors start-->
+	<!--Colors start-->
     <section>
         <h3>colors</h3>
    <p class="air"> The color variables are found at the top, inside the theme-default.css. <br>
-    <hr> 
-       Short Info about color classes. 
+    <hr>
+       Short Info about color classes.
    </p>
    <dl class="sq-dl sq-dl-divider">
        <dt>Classes</dt>
@@ -416,6 +469,7 @@
        <dd class="sq-primary"><strong>sq-primary</strong> - This variable is using white text and the primary background color.</dd>
        <dd class="sq-primary-highlight"><strong>sq-primary-highlight</strong> - This is using the primary highlight variable, ment for highlighting  objects.</dd>
        <dd class="sq-secondary"><strong>sq-secondary</strong> - This variable is using white text and the secondary background color.</dd>
+       <dd class="sq-secondary-transparancy"><strong>sq-secondary-transparancy</strong> - This is using the secondary-transparancy variable ment for modal windows.</dd>
        <dd class="sq-secondary-highlight"><strong>sq-secondary-highlight</strong> - This is using the secondary highlight variable, ment for highlighting  objects.</dd>
        <dd class="sq-success"><strong>sq-success</strong> - This variable is using white text and the success background color.</dd>
        <dd class="sq-success-highlight"><strong>sq-success-highlight</strong> - This is using the success highlight variable, ment for highlighting  objects.</dd>
@@ -442,6 +496,7 @@
     --primary: #0088ce; <br>
     --primary-highlight: #39a5dc; <br>
     --secondary: #393f44; <br>
+    --secondary-transparancy: #393f44dd; <br>
     --secondary-highlight: #72767b; <br>
     --background: #fafafa; <br>
     --background-secondary: #ededed; <br>
@@ -470,9 +525,9 @@
     <div>
             <a href="https://codepen.io/Sepuko/pen/xjrzKw?editors=1100#0">Interactive Demo</a>
         </div>
-
     </section>
     <!--Colors end-->
+
     <!--Shadows start-->
 <section>
         <h3 id="shadows">Shadows</h3>
@@ -500,14 +555,13 @@
                     </div>                     
 </section>
 <!--Shadows end-->
+
     <!--Modal and tabs start-->
     <section>
         <h3>Modal and Tabs</h3>
         <p class="air">Short Info about Modal and tabs</p>
         <dl class="sq-dl sq-dl-divider">
-
     <p><strong>Modal window and tabs</strong> <br>Add Overlay Window and tabs</p>
-
   <dl>
     <dt> <strong>Classes</strong></dt>
     <dd><strong>sq-modal</strong> - Adds a hidden modal window</dd>
@@ -519,20 +573,16 @@
     <dd><strong>sq-tabs-label</strong> - Orders the tabs and styles the tab buttons</dd>
     <dd><strong>sq-tabs-input</strong> - Adds a radio class to the tabs and styles them</dd>
   </dl>
-
-  <pre class="code1">
+  <pre class="code">
     <code>
                 &ltdiv class="sq-modal-content"/"sq-tabs" &gt
                       ...add content/text+++...
                 &lt/div&gt
     </code>
   </pre>
-
   <div>
     <a href="https://codepen.io/tom_ra/pen/LmOyJG">Interactive Demo</a>
 </div>
-
-
 	<section>
 	<h3 id="forms">Forms / input fields</h3>
 	<p class="air">
@@ -562,7 +612,7 @@
 			</fieldset>
 		</form>
 	</div>
-	<pre class="code1 air">
+	<pre class="code air">
 		<code>
 &ltform class="sq-form" action="index.html" method="post" type=text&gt
 	&ltfieldset>
@@ -585,7 +635,7 @@
 			<input type="password" name="" value="" placeholder="Password">
 		</fieldset>
 	</form>
-	<pre class="code1 air">
+	<pre class="code air">
 		<code>
 &ltform class="sq-form" action="index.html" method="post"&gt
 	&ltfieldset&gt
@@ -597,48 +647,51 @@
 		</code>
 	</pre>
 	<hr class="air" />
-	<a href="#top"></a>
+	<a href="#top">Top</a>
 	</section>
 <!-- End forms -->
-
-
     <!--Table Start-->
     <section>
-        <h3>Tables</h3>
-        <p class="air"> Short Info about table</p>
+      <h3 id="table">Tables</h3>
+      <p class="air"> Short Info about table</p>
         <dl class="sq-dl sq-dl-divider">
-            <dt><strong>Classes</strong></dt>
-            <dd><strong>sq-table-striped</strong> - Table line becomes striped</dd>
-            <dd><strong>sq-table-border</strong> - Bordered table</dd>
-            <dd><strong>sq-table-hover</strong> - Hover over Table</dd>
-            <dd><strong>sq-table-misc</strong> - Misc items to the table. Add Misc icon.</dd>
+          <dt><strong>Classes</strong></dt>
+          <dd><strong>sq-table-striped</strong> - Table line becomes striped</dd>
+          <dd><strong>sq-table-border</strong> - Bordered table</dd>
+          <dd><strong>sq-table-hover</strong> - Hover over Table</dd>
+          <dd><strong>sq-table-misc</strong> - Misc items to the table. Add Misc icon.</dd>
         </dl>
         <!--table visual-->
-        <table class="sq-table-striped sq-table-border sq-table-hover sq-table-border-bottom sq-table-misc-arrow-up">
-            <tr>
+        <div class="sq-custom-Table-container sq-mt-2 sq-border-1 ">
+          <div class="sq-custom-navbar sq-mb-2 sq-border-1 sq-background-black"></div>
+            <table class="sq-border-collapse sq-table-striped sq-table-hover sq-table-misc-arrow-up sq-custom-table-position">
+              <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Country</th>
-            </tr>
-            <tr>
-                <td>Name1</td>
-                <td>30</td>
-                <td>Norway</td>
-            </tr>
-            <tr>
-                <td>Name2</td>
-                <td>40</td>
-                <td>Denmark</td>
-            </tr>
-            <tr>
-                <td>Name3</td>
-                <td>55</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-
+              </tr>
+              <tr>
+                <td class="sq-table-row-padding-05">Name1</td>
+                <td>Age1</td>
+                <td>Country1</td>
+              </tr>
+              <tr>
+                <td class="test">Name2</td>
+                <td>Age2</td>
+                <td>Country2</td>
+              </tr>
+              <tr>
+                <td class="sq-table-row-padding-2">Name3</td>
+                <td>Age3</td>
+                <td>Country3</td>
+              </tr>
+            </table>
+          <div class="sq-custom-footer sq-border-1 sq-mt-2 sq-background-black"></div>
+        </div>
+      
         <!--code field-->
-        <pre class="code1">
+
+        <pre class="code">
             <code>
         &ltdiv class="sq-table-striped sq-table-hover sq-table-border-bottom" &gt
                     ...add content/text+++...
@@ -647,15 +700,380 @@
         </pre>
 
         <!--link to codepen-->
-        <a href="https://codepen.io/bjornum/pen/KRqeeP?editors=1100">Interactive Demo</a>
+        <a href="https://codepen.io/bjornum/pen/deJJpe">Interactive Demo</a>
         <hr class="air"/>
         <a href ="#top"></a>
     </section>
+
+	<section>
+		<!--Radio Start-->
+		<h3 id="radiobuttons">Radio Buttons</h3>
+			<p>Basic radio buttons and checkboxes</p>
+			<dd><strong>.sq-form input</strong> - Main class for Radiobuttons and Checkboxes</dd>
+			<dd><strong>Radiobuttons in a single block has to share name</strong></dd>
+			    <!--radio buttons visual-->
+<p>Selection List</p>
+	<select>
+		<option value="">Test1</option>
+		<option value="">Test2</option>
+		<option value="">Test3</option>
+	</select>
+	<p>Checkbox</p>
+	<form class="sq-form">
+	 	<input type="checkbox" disabled="disabled" name="ord" value="">Disabled checkbox
+		<input type="checkbox" name="ord" value="true">Checkable box
+		<input type="checkbox" checked="checked" name="ord" value="">Checked when page loads
+	</form>
+<p>Radiobuttons</p>
+<form class="sq-form" action="index.html" method="post">
+		<input type="radio" checked="checked" name="test" value="test">Checked when page loads
+		<input type="radio"  name="test" value="">Test
+		<input type="radio" disabled="disabled" name="test" value="">Disabled button
+</form>
+		<!--code field-->
+		<pre class="code1">
+	      <code>
+	       &ltform class="sq-form"&gt
+		   input type="checkbox/radio" name="test" &gt
+	            ...add content/text+++...
+	       &lt/form&gt
+	      </code>
+	    </pre>
+		<!--link to codepen-->
+		<a href="https://codepen.io/MrJohns1/pen/VxyvJX">Interactive Demo</a>
+		<hr class="air"/>
+		<a href ="#top"></a>
+		<!-- Radiobuttons and Checkboxes End-->
+	</section>
+	<!-- Responsive design start -->
+	<section>
+	  <h3 id="responsive">Responsive design</h3>
+	  <p>
+	    Whether the reader of the page is viewed by someone holding a small mobile og sitting behind a
+	    computer with a big screen, the content of the page should be easy to access. The main issue
+	    of resp design, is to create all pages for small screen, and use CSS for adjusting content for bigger screens.
+	    This framework is made with seperate CSS media queries in the CSS-file base.css. The base font-size is set in
+	    percent relative to the users browser / system. This makes it possible for each user to access the content of
+	    the page using his og hers prefered size settings. If setting size adjustments, use REM for changes of typography
+	    or elements related to font size, and use EM to adjust size of elements thats not relative to typography.
+	  </p>
+	  <p>
+	    The main size for the tag HTML in CSS is set to use a small mobile phone. There is seperate adjustments of the
+	    HTML-tag seperated with @media, that adjusts base fontsize relative to the size of the browser window.
+	  </p>
+	  <hr class="air" />
+	  <a href="#top"></a>
+	</section>
+	<!-- Responsive design end -->
+
     <!--table End-->
 
+<!-- codeFunction start -->
+<section>
+    <h3 id="">CloseFunction</h3>
+    <p>A close function gives you the uppertunity to close your modal window </p>
+<dl class="sq-dl sq-dl-divider">
+<dt>Closefunction classes</dt>
+<dd><strong>.sq-close</strong>Creates a "X" button in the right corner (also has a ":hover" CSS class)</dd>
+<dd><strong>.sq-modalbg (the modal class used in this example)</strong> Creates a modal window with
+a transparent background. (Also has a :target, .dialog, and a target.dialog CSS class)</dd>
+<br>
+</dl>
+<!-- CloseFunction Code -->
+<span>Close function HTML</span>
+<pre class="code">
+<code>    
+&lta&gt class="sq-button" href="#openModal">Button&lt/a&gt
+&ltdiv&gt id="openModal" class="sq-modalbg">
+&ltdiv&gt class="dialog">
+&lta&gt href="#close" title="Close" class="sq-close">
+&ltsvg&gt id="i-close" viewBox="0 0 32 32" width="16" height="16" 
+fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+&ltpath d="M2 30 L30 2 M30 30 L2 2" &gt
+&lt/svg&gt &lt/a&gt
+&lth2&gt A open Modal&lt/h2&gt
+&lt/div&gt
+&lt/div&gt
+</pre>
+<!-- CSS codeTag -->
+<span>Close function CSS</span>
+<pre class="code">
+ /** Close function **/
+.sq-close {
+    line-height: 1rem;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    width:24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease-out;
+    -transition-delay: 0.2s;
+}
+/** The modal used in this example **/
+.sq-modalbg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    z-index: 99999;
+    display: block;
+    pointer-events: none;
+  }
+</pre>
+</code>
+<a href="https://codepen.io/alfolsen/pen/OZzmOW">Visual example with this module</a>
+<hr class="air"/>
+<a href ="#top">Top</a>
+</section>
+<!-- CloseFunction END-->
+
+      
+    <!--Progress Bar-->
+    <section>
+      <h3 id="progressBar">ProgressBar</h3>
+      <p class="air"> can be used to show the progress of something</p>
+        <dl class="sq-dl sq-dl-divider">
+          <dt><strong>Types</strong></dt>
+          <dd><strong>CSS only ProgressBar</strong> - Created with css only</dd>
+          <dd><strong>Dynamic ProgressBar</strong> - Created with css and Javascript</dd>
+        </dl>
+    <!--Progressbar Visual-->
+    <!--Basic Progress bar with css-->
+      <div>
+        <p><strong>Progress Bar </strong> <br>With CSS only </p>
+        <div class="sq-progressBar-width sq-border-1">
+          <div class="sq-background-grey sq-progressBar-20">20%</div>
+        </div>    
+        <div class="sq-progressBar-width sq-border-1 sq-mt-05">
+          <div class="sq-background-red sq-progressBar-40 sq-text-center">40%</div>
+        </div>    
+        <div class="sq-progressBar-width sq-border-1 sq-mt-05">
+          <div class="sq-background-lightblue sq-progressBar-70 sq-padding-05">70%</div>
+        </div>   
+        <div class="sq-progressBar-width sq-border-1 sq-mt-05">
+          <div class="sq-background-green sq-progressBar-50 sq-text-center sq-padding-1">50%</div>
+        </div>   
+      </div>
+    <!--End of Progress Bar with CSS-->
+        
+    <!--Dynamic Progress Bar-->
+      <div class="sq-progressBar-container">
+        <p><strong>Dynamic Progress Bar </strong> <br>With CSS and Javascript</p>
+        <div class="sq-background-lightgrey sq-progressBar-width sq-border-1 sq-mt-05">
+          <div id="sqBar" class="sq-background-lightblue sq-progressBar-0 sq-text-center">1%</div>
+        </div>
+        <p id="sqlabelOutside">1%</p>
+        <button onclick="sqMove()">Click Me</button>
+      </div>
+    <!--end of Dynamic Progress Bar-->
+      <a href="https://codepen.io/bjornum/pen/bMYKva?editors=1100">Interactive Demo</a>
+      <hr class="air"/>
+      <a href ="#top"></a>
+    </section>
+    <!--progressBar end-->
+      
+    <!--Sliding Underlines-->
+    <section>
+      <h3 id="slidingUnderline">Sliding Underlines</h3>
+      <p class="air"> Animate an underline in different ways, underneat the text</p>
+      <dl class="sq-dl sq-dl-divider">
+        <dt><strong>Classes</strong></dt>
+        <dd><strong>sq-sliding-topBot</strong> - Make the line animate from top and down</dd>
+        <dd><strong>sq-sliding-rightToLeft</strong> - Animate underline from Right to Left</dd>
+        <dd><strong>sq-sliding-leftToRight</strong> - Animate underline from Left to Right</dd>
+        <dd><strong>sq-sliding-middleOut</strong> - Animate line from center and outwards</dd>
+        <dd><strong>sq-sliding-inAndOnward</strong> -  When Hovering, line comes. "keeps going" when leaving</dd>
+        <dd><strong>sq-sliding-stayTilHover</strong> - Underline stay til Hovering Over</dd>
+      </dl>
+    <!--Sliding underline visual-->
+      <div class="sq-underline-width">
+        <h3 class="sq-sliding-middleOut">Sliding Middle Out</h3>
+        <h3 class="sq-sliding-inAndOnward">In and Onwards</h3>
+        <h3 class="sq-sliding-stayTilHover">Stay til Hover</h3>
+      </div>
+      <pre class="code1 sq-l-padding-15">
+        <code>
+        &ltdiv class="sq-sliding-middleOut" &gt
+          add content/text.
+        &lt/div&gt
+        </code>
+      </pre>
+      <div>
+        <a href="https://codepen.io/bjornum/pen/RyjQWW?editors=1100">Interactive Demo</a>
+      </div>
+      <hr class="air"/>
+      <a href ="#top">top</a>
+    </section>
+    <!--Sliding Underline End-->
 
 
-    <!-- <section> -->
+	<section>
+	<h3 id="chartist">Chartist</h3>
+	<p>
+        Integration of Chartis charts.
+
+
+
+	</p>
+	 <dl class="sq-dl sq-dl-divider">
+	 <dt>Charts</dt>
+	 <dd><strong>Different types of charts</strong></dd>
+	</dl>
+	<br>
+	<div>
+    <!-- visual cue -->
+    <dd><strong>Line-charts</strong> - Charts that displays a line</dd>
+	<div class="sq-success" id="chart1">
+    </div>
+
+
+<pre class="code air">
+<code>
+&ltdiv class="sq-success" id="chart1"&gt
+&lt/div&gt
+</pre>
+<pre class="code">
+&ltscript&gt
+    var data1 = {
+    labels: ['jan', 'Feb', 'Apr', 'Mar', 'May'],
+    series: [
+    [5, 4, 3, 7, 5, 10],
+    [3, 2, 9, 5, 4, 6],
+    [2, 1, -3, -4, -2, 0]
+    ]
+    };
+    new Chartist.Line('#chart1', data1);
+&lt/script&gt
+</code>
+</pre>
+
+
+<dd><strong>Pie-chart</strong> - A chart that is formed like a circle</dd>
+<div id="chart2">
+</div>
+
+<pre class="code air">
+<code>
+&ltdiv id="chart2"&gt
+&lt/div&gt
+</pre>
+<pre class="code">
+&ltscript&gt
+    var  data2 = {
+    series: [5, 3, 4, 10, 5, 4, 3]
+    };
+    var sum = function(a, b) {return a + b };
+    new Chartist.Pie('#chart2', data2, {
+    labelInterpolationFnc: function(value){
+    return Math.round(value / data2.series.reduce(sum) * 100) + '%';
+    }
+    });
+&lt/script&gt
+</code>
+</pre>
+<dd><strong>Bars-chart</strong> - A chart that displays vertical bars </dd>
+<div class="sq-success" id="chart3">
+</div>
+
+<pre class="code air">
+<code>
+&ltdiv class="success" id="chart3"&gt
+&lt/div&gt
+</pre>
+<pre class="code">
+&ltscript&gt
+    new Chartist.Bar('#chart3', {
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    series: [
+    [5, 4, 3, 7, 5, 10, 3],
+    [3, 2, 9, 5, 4, 6, 4]
+    ]
+    }, {
+    axisX: {
+    position: 'start'
+    },
+    axisY: {
+    position: 'end'
+    }
+    });
+&lt/script&gt
+</code>
+</pre>
+
+	</div>
+	<!-- <hr class="air" /> -->
+	<a href="#top">Top</a>
+
+	</section>
+
+        <!--Animation-->
+        <section>
+            <h3 id="animations">Animations</h3>
+            <p>Text animation and icon animation. <br>
+            <strong>The animations</strong> can be copied. There is only the most used icon on the icon animation.</p>
+            <dl class="sq-dl sq-dl-divider">
+              <dt>Classes Text Animation</dt>
+              <dd><strong>.sq-animation-fade</strong> The element fades in.</dd>  <br>
+        
+              <dd><strong>.sq-animation-shake</strong> The element shakes.</dd>    <br>
+        
+              <dd><strong>.sq-animation-scale-up</strong></dd>
+              <dd><strong>.sq-animation-scale-down</strong> The element fades in and scale up or down.</dd>  <br>
+        
+              <dd><strong>.sq-animation-slide-top</strong></dd>
+              <dd><strong>.sq-animation-slide-bottom</strong></dd>
+              <dd><strong>.sq-animation-slide-left</strong></dd>
+              <dd><strong>.sq-animation-slide-right</strong> The element fades and slides in from the top, bottom, left or right by its own height or width</dd>  <br>
+        
+              <dd><strong>.sq-animation-slide-top-small</strong></dd>
+              <dd><strong>.sq-animation-slide-bottom-small</strong></dd>
+              <dd><strong>.sq-animation-slide-left-small</strong></dd>
+              <dd><strong>.sq-animation-slide-right-small</strong> The element fades and slides in from the top, bottom, left or right with a smalles distance which is specified by a fixed pixel value.</dd>  <br>
+        
+              <dd><strong>.sq-animation-slide-top-medium</strong></dd>
+              <dd><strong>.sq-animation-slide-bottom-medium</strong></dd>
+              <dd><strong>.sq-animation-slide-left-medium</strong></dd>
+              <dd><strong>.sq-animation-slide-right-medium</strong> The element fades and slides in from the top, bottom, left or right with a medium distance which is specified by a fixed pixel value.</dd>  <br>
+            </dl>
+        <link rel="stylesheet" href="../css/text_animation.css">
+        
+            <div class="sq-animation-toggle">
+                  <div class="sq-card sq-card-default sq-card-body sq-animation-fade">
+                      <p class="sq-text-center">"Fade"</p>
+                  </div>
+              </div>
+        
+              <div class="sq-animation-toggle">
+                <div class="sq-card sq-card-default sq-card-body sq-animation-shake">
+                  <p class="sq-text-center">"Shake"</p>
+                </div>
+              </div>
+            <a href="https://codepen.io/iMacMo/pen/vjZjqm">Interactive Demo for text animation</a>
+            <a href="#top"></a>
+        
+            <dt>Classes Icon Animation</dt>
+            <dd><strong>.sq-animation-fade</strong> The icon element fades in.</dd>
+        
+            <dd><strong>.sq-animation-shake</strong> The icon element shakes.</dd>
+        
+            <dd><strong>.sq-animation-rotate</strong> The icon element rotate.</dd>
+        
+        <link rel="stylesheet" href="../css/icon_animation.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="sq-animation-toggle">
+           <div class="sq-card sq-card-default sq-card-body sq-animation-rotate">
+                <div class="fa fa-address-book-o"></div>
+           </div>
+          </div>
+        
+            <a href="https://codepen.io/Kaiboii/pen/erydxe">Interactive Demo for icon animation</a>
+            <a href="#top"></a>
+            </section>
+
+	<!-- <section> -->
     <!-- <h3 id="Layouy">Layout</h3> -->
     <!-- <p> -->
     <!-- Base Layout system. contains a base 5 row and 9 column grid -->
@@ -669,7 +1087,6 @@
     <!-- </div> -->
     <!-- <hr class="air" /> -->
     <!-- <a href="#top"></a> -->
+    <!-- </section> -->
 
-    <!-- </section> --> 
 </body>
-
