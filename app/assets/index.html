@@ -34,12 +34,13 @@
         <dd><a href="#typography">Typography</a></dd>
         <dd><a href="#shadows">Shadows</a></dd>
         <dd><a href="#modaltabs">Modal and Tabs</a></dd>
+        <dd><a href="#table">Table</a></dd>
+        <dd><a href="#progressBar">progressBar</a></dd>
+        <dd><a href="#slidingUnderline">Sliding Underline</a></dd>
 		    <dd><a href="#radiobuttons">Radio Buttons</a></dd>
 		    <dd><a href="#responsive">Responsive Design</a></dd>
         <dd><a href="#navbarLinks">Navbar dropdown menu</a></dd>
     		<dd><a href="#chartist">Chartlist</a></dd>
-
-
     </dl>
     <hr/>
     <!-- about and Toc end  -->
@@ -207,7 +208,7 @@
     <!--cards end-->
     <!--Align content-->
     <section>
-        <h1>Align content</h1>
+        <h1 id="Align Content">Align content</h1>
         <p class="air"> CSS to help position the element in HTML</p>
         <!--Justify Content Start-->
         <h3>Justify Content</h3>
@@ -393,7 +394,7 @@
         </div>  <br>
 
     <pre class="code">
-        <code>
+      <code>
         &ltbutton class="sq-collapsible"&gt &lt/button&gt
             &ltdiv class="sq-collapsible-content"&gt
                 &ltp Text in "p" tag here &gt&ltp
@@ -648,40 +649,45 @@
 <!-- End forms -->
     <!--Table Start-->
     <section>
-        <h3>Tables</h3>
-        <p class="air"> Short Info about table</p>
+      <h3 id="table">Tables</h3>
+      <p class="air"> Short Info about table</p>
         <dl class="sq-dl sq-dl-divider">
-            <dt><strong>Classes</strong></dt>
-            <dd><strong>sq-table-striped</strong> - Table line becomes striped</dd>
-            <dd><strong>sq-table-border</strong> - Bordered table</dd>
-            <dd><strong>sq-table-hover</strong> - Hover over Table</dd>
-            <dd><strong>sq-table-misc</strong> - Misc items to the table. Add Misc icon.</dd>
+          <dt><strong>Classes</strong></dt>
+          <dd><strong>sq-table-striped</strong> - Table line becomes striped</dd>
+          <dd><strong>sq-table-border</strong> - Bordered table</dd>
+          <dd><strong>sq-table-hover</strong> - Hover over Table</dd>
+          <dd><strong>sq-table-misc</strong> - Misc items to the table. Add Misc icon.</dd>
         </dl>
         <!--table visual-->
-        <table class="sq-table-striped sq-table-border sq-table-hover sq-table-border-bottom sq-table-misc-arrow-up">
-            <tr>
+        <div class="sq-custom-Table-container sq-mt-2 sq-border-1 ">
+          <div class="sq-custom-navbar sq-mb-2 sq-border-1 sq-background-black"></div>
+            <table class="sq-border-collapse sq-table-striped sq-table-hover sq-table-misc-arrow-up sq-custom-table-position">
+              <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Country</th>
-            </tr>
-            <tr>
-                <td>Name1</td>
-                <td>30</td>
-                <td>Norway</td>
-            </tr>
-            <tr>
-                <td>Name2</td>
-                <td>40</td>
-                <td>Denmark</td>
-            </tr>
-            <tr>
-                <td>Name3</td>
-                <td>55</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-
+              </tr>
+              <tr>
+                <td class="sq-table-row-padding-05">Name1</td>
+                <td>Age1</td>
+                <td>Country1</td>
+              </tr>
+              <tr>
+                <td class="test">Name2</td>
+                <td>Age2</td>
+                <td>Country2</td>
+              </tr>
+              <tr>
+                <td class="sq-table-row-padding-2">Name3</td>
+                <td>Age3</td>
+                <td>Country3</td>
+              </tr>
+            </table>
+          <div class="sq-custom-footer sq-border-1 sq-mt-2 sq-background-black"></div>
+        </div>
+      
         <!--code field-->
+
         <pre class="code">
             <code>
         &ltdiv class="sq-table-striped sq-table-hover sq-table-border-bottom" &gt
@@ -689,8 +695,9 @@
         &lt/div&gt
             </code>
         </pre>
+
         <!--link to codepen-->
-        <a href="https://codepen.io/bjornum/pen/KRqeeP?editors=1100">Interactive Demo</a>
+        <a href="https://codepen.io/bjornum/pen/deJJpe">Interactive Demo</a>
         <hr class="air"/>
         <a href ="#top"></a>
     </section>
@@ -757,6 +764,85 @@
 	<!-- Responsive design end -->
 
     <!--table End-->
+      
+    <!--Progress Bar-->
+    <section>
+      <h3 id="progressBar">ProgressBar</h3>
+      <p class="air"> can be used to show the progress of something</p>
+        <dl class="sq-dl sq-dl-divider">
+          <dt><strong>Types</strong></dt>
+          <dd><strong>CSS only ProgressBar</strong> - Created with css only</dd>
+          <dd><strong>Dynamic ProgressBar</strong> - Created with css and Javascript</dd>
+        </dl>
+    <!--Progressbar Visual-->
+    <!--Basic Progress bar with css-->
+      <div>
+        <p><strong>Progress Bar </strong> <br>With CSS only </p>
+        <div class="sq-progressBar-width sq-border-1">
+          <div class="sq-background-grey sq-progressBar-20">20%</div>
+        </div>    
+        <div class="sq-progressBar-width sq-border-1 sq-mt-05">
+          <div class="sq-background-red sq-progressBar-40 sq-text-center">40%</div>
+        </div>    
+        <div class="sq-progressBar-width sq-border-1 sq-mt-05">
+          <div class="sq-background-lightblue sq-progressBar-70 sq-padding-05">70%</div>
+        </div>   
+        <div class="sq-progressBar-width sq-border-1 sq-mt-05">
+          <div class="sq-background-green sq-progressBar-50 sq-text-center sq-padding-1">50%</div>
+        </div>   
+      </div>
+    <!--End of Progress Bar with CSS-->
+        
+    <!--Dynamic Progress Bar-->
+      <div class="sq-progressBar-container">
+        <p><strong>Dynamic Progress Bar </strong> <br>With CSS and Javascript</p>
+        <div class="sq-background-lightgrey sq-progressBar-width sq-border-1 sq-mt-05">
+          <div id="sqBar" class="sq-background-lightblue sq-progressBar-0 sq-text-center">1%</div>
+        </div>
+        <p id="sqlabelOutside">1%</p>
+        <button onclick="sqMove()">Click Me</button>
+      </div>
+    <!--end of Dynamic Progress Bar-->
+      <a href="https://codepen.io/bjornum/pen/bMYKva?editors=1100">Interactive Demo</a>
+      <hr class="air"/>
+      <a href ="#top"></a>
+    </section>
+    <!--progressBar end-->
+      
+    <!--Sliding Underlines-->
+    <section>
+      <h3 id="slidingUnderline">Sliding Underlines</h3>
+      <p class="air"> Animate an underline in different ways, underneat the text</p>
+      <dl class="sq-dl sq-dl-divider">
+        <dt><strong>Classes</strong></dt>
+        <dd><strong>sq-sliding-topBot</strong> - Make the line animate from top and down</dd>
+        <dd><strong>sq-sliding-rightToLeft</strong> - Animate underline from Right to Left</dd>
+        <dd><strong>sq-sliding-leftToRight</strong> - Animate underline from Left to Right</dd>
+        <dd><strong>sq-sliding-middleOut</strong> - Animate line from center and outwards</dd>
+        <dd><strong>sq-sliding-inAndOnward</strong> -  When Hovering, line comes. "keeps going" when leaving</dd>
+        <dd><strong>sq-sliding-stayTilHover</strong> - Underline stay til Hovering Over</dd>
+      </dl>
+    <!--Sliding underline visual-->
+      <div class="sq-underline-width">
+        <h3 class="sq-sliding-middleOut">Sliding Middle Out</h3>
+        <h3 class="sq-sliding-inAndOnward">In and Onwards</h3>
+        <h3 class="sq-sliding-stayTilHover">Stay til Hover</h3>
+      </div>
+      <pre class="code1 sq-l-padding-15">
+        <code>
+        &ltdiv class="sq-sliding-middleOut" &gt
+          add content/text.
+        &lt/div&gt
+        </code>
+      </pre>
+      <div>
+        <a href="https://codepen.io/bjornum/pen/RyjQWW?editors=1100">Interactive Demo</a>
+      </div>
+      <hr class="air"/>
+      <a href ="#top">top</a>
+    </section>
+    <!--Sliding Underline End-->
+
 
 	<section>
 	<h3 id="chartist">Chartist</h3>
@@ -775,6 +861,7 @@
     <dd><strong>Line-charts</strong> - Charts that displays a line</dd>
 	<div class="sq-success" id="chart1">
     </div>
+
 
 <pre class="code air">
 <code>
