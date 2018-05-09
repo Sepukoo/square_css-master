@@ -101,3 +101,27 @@
     color: var(--divider);
 }
 
+/*misc*/
+.sq-background-black{
+    background-color: var(--black);
+}
+
+.sq-background-grey{
+    background-color: var(--grey);
+}
+
+.sq-background-lightgrey{
+    background-color: var(--muted);
+}
+
+.sq-background-lightblue{
+    background-color: var(--info-highlight);
+}
+
+.sq-background-green{
+    background-color: var(--success);
+}
+
+.sq-background-red{
+    background-color: var(--danger-highlight);
+}
