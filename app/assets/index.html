@@ -34,6 +34,7 @@
         <dd><a href="#collapsible">Collapsible</a></dd>
         <dd><a href="#typography">Typography</a></dd>
         <dd><a href="#modaltabs">Modal and Tabs</a></dd>
+        <dd><a href="#navbarLinks">Navbar dropdown menu</a></dd>
     </dl>
 
     <hr/>
@@ -278,13 +279,12 @@
         <a href="#top"></a>
     </section>
     <!--Align Items End-->
-<<<<<<< HEAD
     <!-- Nav dropdown menu start -->
     <section>
-      <h3 id="Nav dropdown">Nav Dropdown</h3>
+      <h3 id="nav-dropdown">Nav dropdown menu</h3>
         <p>
-          Code used to transform the links on a navbar into a icon with a dropdown menu when the window made smaller.<br>
-          To use as dropdown menu without the resize function simply use the classes <strong>NOT</strong> includeing <ins>window.addEventListener</ins> in Js and sq-nav-dropdown <ins>display:none;</ins>.<br>
+          Code used to transform the links on a navbar into a icon with a dropdown menu when the window is made smaller.<br>
+          To use as dropdown menu without the resize function simply use the classes <strong>NOT</strong> includeing <ins>window.addEventListener</ins> in JS and sq-nav-dropdown <ins>display:none;</ins>.<br>
           To edit the width and height sizeing when the dropdown menu appears simply go to window.addEventListener function and change window.innerWidght and window.innerHeight numbers.
         </p>
         <dl class="sq-dl sq-dl-divider" >
@@ -295,6 +295,8 @@
           <dd><strong>.sq-nav-dropdown ul</strong>CSS only class, removeing list style,margin and adding paddin 0.3rem.</dd>
           <dd><strong>.sq-nav-dropdown-content a:hover</strong>CSS only class, adding background color when hovering links within the container.</dd>
           <dd><strong>.sq-nav-dropbtn:hover</strong>CSS only class, adding background color when hovering the toggle button.</dd>
+          <dd><strong>function showDropContent()</strong>Function which toggle show/hide on the dropdown menu content.</dd>
+          <dd><strong>window.addEventListener("resize",function())</strong>Function which swap out the navbar links to a dropdown menu when the window is made smaller.</dd>
         </dl>
         <div>
           <div id="navbarLinks">
