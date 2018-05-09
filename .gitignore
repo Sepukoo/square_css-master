@@ -1,4 +1,5 @@
 # Numerous always-ignore extensions
+*.json
 *.diff
 *.err
 *.orig
@@ -19,8 +20,13 @@
 nbproject
 Thumbs.db
 
+
 # NPM packages folder.
 node_modules/
 
 # Brunch output folder.
 public/
+
+# Specific files
+package-lock.json
+package.json
