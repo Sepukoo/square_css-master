@@ -4,6 +4,7 @@
     --primary: #0088ce;
     --primary-highlight: #39a5dc;
     --secondary: #393f44;
+    --secondary-transparancy: #393f44dd;
     --secondary-highlight: #72767b;
     --background: #fafafa;
     --background-secondary: #ededed;
@@ -39,7 +40,11 @@
 .sq-secondary{
     color: var(--text-white);
     background-color: var(--secondary);
-}
+}    
+.sq-secondary-transparancy{
+    background-color: var(--secondary-transparancy);
+}    
+
 .sq-secondary-highlight{
     background-color: var(--secondary-highlight);
 }

@@ -468,6 +468,7 @@
        <dd class="sq-primary"><strong>sq-primary</strong> - This variable is using white text and the primary background color.</dd>
        <dd class="sq-primary-highlight"><strong>sq-primary-highlight</strong> - This is using the primary highlight variable, ment for highlighting  objects.</dd>
        <dd class="sq-secondary"><strong>sq-secondary</strong> - This variable is using white text and the secondary background color.</dd>
+       <dd class="sq-secondary-transparancy"><strong>sq-secondary-transparancy</strong> - This is using the secondary-transparancy variable ment for modal windows.</dd>
        <dd class="sq-secondary-highlight"><strong>sq-secondary-highlight</strong> - This is using the secondary highlight variable, ment for highlighting  objects.</dd>
        <dd class="sq-success"><strong>sq-success</strong> - This variable is using white text and the success background color.</dd>
        <dd class="sq-success-highlight"><strong>sq-success-highlight</strong> - This is using the success highlight variable, ment for highlighting  objects.</dd>
@@ -494,6 +495,7 @@
     --primary: #0088ce; <br>
     --primary-highlight: #39a5dc; <br>
     --secondary: #393f44; <br>
+    --secondary-transparancy: #393f44dd; <br>
     --secondary-highlight: #72767b; <br>
     --background: #fafafa; <br>
     --background-secondary: #ededed; <br>
@@ -764,6 +766,69 @@
 	<!-- Responsive design end -->
 
     <!--table End-->
+
+<!-- codeFunction start -->
+<section>
+    <h3 id="">CloseFunction</h3>
+    <p>A close function gives you the uppertunity to close your modal window </p>
+<dl class="sq-dl sq-dl-divider">
+<dt>Closefunction classes</dt>
+<dd><strong>.sq-close</strong>Creates a "X" button in the right corner (also has a ":hover" CSS class)</dd>
+<dd><strong>.sq-modalbg (the modal class used in this example)</strong> Creates a modal window with
+a transparent background. (Also has a :target, .dialog, and a target.dialog CSS class)</dd>
+<br>
+</dl>
+<!-- CloseFunction Code -->
+<span>Close function HTML</span>
+<pre class="code">
+<code>    
+&lta&gt class="sq-button" href="#openModal">Button&lt/a&gt
+&ltdiv&gt id="openModal" class="sq-modalbg">
+&ltdiv&gt class="dialog">
+&lta&gt href="#close" title="Close" class="sq-close">
+&ltsvg&gt id="i-close" viewBox="0 0 32 32" width="16" height="16" 
+fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+&ltpath d="M2 30 L30 2 M30 30 L2 2" &gt
+&lt/svg&gt &lt/a&gt
+&lth2&gt A open Modal&lt/h2&gt
+&lt/div&gt
+&lt/div&gt
+</pre>
+<!-- CSS codeTag -->
+<span>Close function CSS</span>
+<pre class="code">
+ /** Close function **/
+.sq-close {
+    line-height: 1rem;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    width:24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease-out;
+    -transition-delay: 0.2s;
+}
+/** The modal used in this example **/
+.sq-modalbg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    z-index: 99999;
+    display: block;
+    pointer-events: none;
+  }
+</pre>
+</code>
+<a href="https://codepen.io/alfolsen/pen/OZzmOW">Visual example with this module</a>
+<hr class="air"/>
+<a href ="#top">Top</a>
+</section>
+<!-- CloseFunction END-->
+
       
     <!--Progress Bar-->
     <section>
@@ -848,6 +913,7 @@
 	<h3 id="chartist">Chartist</h3>
 	<p>
         Integration of Chartis charts.
+
 
 
 	</p>
