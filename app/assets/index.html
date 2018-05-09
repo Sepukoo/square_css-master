@@ -10,7 +10,6 @@
   <script src="/app.js"></script>
 </head>
 <body class="container">
-
     <!-- about and Toc start -->
     <h1>Square CSS Documentation</h1>
     <hr class="air" />
@@ -19,7 +18,6 @@
         All the lorem ipsum in the world goes ehre
     </article>
     <hr class="air"/>
-
     <dl class="sq-dl sq-dl-divider air">
         <dt>Table of Content</dt>
         <dd><a href="#colors">Colors</a></dd>
@@ -36,17 +34,16 @@
         <dd><a href="#typography">Typography</a></dd>
         <dd><a href="#shadows">Shadows</a></dd>
         <dd><a href="#modaltabs">Modal and Tabs</a></dd>
-
+		    <dd><a href="#radiobuttons">Radio Buttons</a></dd>
+		    <dd><a href="#responsive">Responsive Design</a></dd>
         <dd><a href="#navbarLinks">Navbar dropdown menu</a></dd>
+    		<dd><a href="#chartist">Chartlist</a></dd>
 
-		<dd><a href="#chartist">Chartlist</a></dd>
 
     </dl>
-
     <hr/>
-
     <!-- about and Toc end  -->
-<!-- Layout start -->
+	<!-- Layout start -->
     <h1 id="#layout">Layout</h1>
     <section>
     <h3 id="Layout">Grid</h3>
@@ -54,7 +51,6 @@
         Base Layout system. contains a base 5 row and 9 column grid <br/>
         the grid accepts panels that works as logical separator between content <br/>
         the panels contain other cards with content. <br/>
-
     </p>
     <dl class="sq-dl sq-dl-divider">
         <dt>Classes</dt>
@@ -128,7 +124,6 @@
     <a href="#top"></a>
     </section>
     <!-- Layout end -->
-
     <!-- panel start -->
     <section>
         <h3 id="panels">Panels</h3>
@@ -171,12 +166,10 @@
 &lt/div&gt
             </code>
         </pre>
-
         <hr class="air" />
         <a href="#top"></a>
     </section>
     <!--panel end-->
-
     <!--cards start-->
     <section>
         <h3 id="cards">Cards</h3>
@@ -192,9 +185,9 @@
                 <div class="sq-info">
                     header
                 </div>
-                                <div>
-                    default card contains header body and footer
-                </div>
+                	<div>
+                    	default card contains header body and footer
+                	</div>
                 <div class="sq-warning">
                     footer
                 </div>
@@ -207,13 +200,11 @@
                     header
                 </div>
             </div>
-
         </div>
         <hr class="air" />
         <a href="#top"></a>
     </section>
     <!--cards end-->
-
     <!--Align content-->
     <section>
         <h1>Align content</h1>
@@ -250,9 +241,7 @@
         <a href="#top"></a>
     </section>
     <!--Justify Content End-->
-
     <!--Align Items Start-->
-
     <section>
         <h3>Align Items</h3>
         <p class="air"> Short Info om Align Items</p>
@@ -285,6 +274,7 @@
         <a href="#top"></a>
     </section>
     <!--Align Items End-->
+
     <!-- Nav dropdown menu start -->
     <section>
       <h3 id="nav-dropdown">Nav dropdown menu</h3>
@@ -349,11 +339,12 @@
         <a href="#top">Top</a>
       </section>
 <!-- Nav dropdown menu end -->
-=======
+
 
 
 
     <!-- Utility Classes Start-->
+
 
 <section>
     <H3 id="utility">Utility</H3>
@@ -385,7 +376,6 @@
     <p>..You can place different tags and content within a collapsible.<br>
     <strong>Note that</strong> the dropdown is a JS function
     which can be found in "vendor/collapsible.js"</p>
-
     <dl class="sq-dl sq-dl-divider">
 
     <dt>Collapsible class</dt>
@@ -396,15 +386,12 @@
             <div> Text "div" tag here</div>
             <span>Text "span" tag here</span>
         </div>  <br>
-
         <button Class="sq-collapsible" style="background-color:orangered">
             Collapsible colored</button>
         <div class="sq-collapsible-content" style="background-color:orange">
             <p>This collapsible is colored</p>
         </div>  <br>
 
-
-    <div class="air">
     <pre class="code">
         <code>
         &ltbutton class="sq-collapsible"&gt &lt/button&gt
@@ -423,11 +410,9 @@
 </section>
     <!-- Collapsible END -->
     <!-- Typography START -->
-
 <section>
 <h3 id="typography">Typography</h3>
 <p>Examples and info about Typography classes</p>
-
 <dt class="sq-dl sq-dl-divider">
 <!--  Font Classes  -->
 <dt>Font classes</dt>
@@ -468,7 +453,7 @@
 <a href="#top"></a>
 </section>
     <!-- Typography END -->
-    <!--Colors start-->
+	<!--Colors start-->
     <section>
         <h3>colors</h3>
    <p class="air"> The color variables are found at the top, inside the theme-default.css. <br>
@@ -536,9 +521,9 @@
     <div>
             <a href="https://codepen.io/Sepuko/pen/xjrzKw?editors=1100#0">Interactive Demo</a>
         </div>
-
     </section>
     <!--Colors end-->
+
     <!--Shadows start-->
 <section>
         <h3 id="shadows">Shadows</h3>
@@ -566,14 +551,13 @@
                     </div>                     
 </section>
 <!--Shadows end-->
+
     <!--Modal and tabs start-->
     <section>
         <h3>Modal and Tabs</h3>
         <p class="air">Short Info about Modal and tabs</p>
         <dl class="sq-dl sq-dl-divider">
-
     <p><strong>Modal window and tabs</strong> <br>Add Overlay Window and tabs</p>
-
   <dl>
     <dt> <strong>Classes</strong></dt>
     <dd><strong>sq-modal</strong> - Adds a hidden modal window</dd>
@@ -585,7 +569,6 @@
     <dd><strong>sq-tabs-label</strong> - Orders the tabs and styles the tab buttons</dd>
     <dd><strong>sq-tabs-input</strong> - Adds a radio class to the tabs and styles them</dd>
   </dl>
-
   <pre class="code">
     <code>
                 &ltdiv class="sq-modal-content"/"sq-tabs" &gt
@@ -593,12 +576,9 @@
                 &lt/div&gt
     </code>
   </pre>
-
   <div>
     <a href="https://codepen.io/tom_ra/pen/LmOyJG">Interactive Demo</a>
 </div>
-
-
 	<section>
 	<h3 id="forms">Forms / input fields</h3>
 	<p class="air">
@@ -666,8 +646,6 @@
 	<a href="#top">Top</a>
 	</section>
 <!-- End forms -->
-
-
     <!--Table Start-->
     <section>
         <h3>Tables</h3>
@@ -711,12 +689,73 @@
         &lt/div&gt
             </code>
         </pre>
-
         <!--link to codepen-->
         <a href="https://codepen.io/bjornum/pen/KRqeeP?editors=1100">Interactive Demo</a>
         <hr class="air"/>
         <a href ="#top"></a>
     </section>
+
+	<section>
+		<!--Radio Start-->
+		<h3 id="radiobuttons">Radio Buttons</h3>
+			<p>Basic radio buttons and checkboxes</p>
+			<dd><strong>.sq-form input</strong> - Main class for Radiobuttons and Checkboxes</dd>
+			<dd><strong>Radiobuttons in a single block has to share name</strong></dd>
+			    <!--radio buttons visual-->
+<p>Selection List</p>
+	<select>
+		<option value="">Test1</option>
+		<option value="">Test2</option>
+		<option value="">Test3</option>
+	</select>
+	<p>Checkbox</p>
+	<form class="sq-form">
+	 	<input type="checkbox" disabled="disabled" name="ord" value="">Disabled checkbox
+		<input type="checkbox" name="ord" value="true">Checkable box
+		<input type="checkbox" checked="checked" name="ord" value="">Checked when page loads
+	</form>
+<p>Radiobuttons</p>
+<form class="sq-form" action="index.html" method="post">
+		<input type="radio" checked="checked" name="test" value="test">Checked when page loads
+		<input type="radio"  name="test" value="">Test
+		<input type="radio" disabled="disabled" name="test" value="">Disabled button
+</form>
+		<!--code field-->
+		<pre class="code1">
+	      <code>
+	       &ltform class="sq-form"&gt
+		   input type="checkbox/radio" name="test" &gt
+	            ...add content/text+++...
+	       &lt/form&gt
+	      </code>
+	    </pre>
+		<!--link to codepen-->
+		<a href="https://codepen.io/MrJohns1/pen/VxyvJX">Interactive Demo</a>
+		<hr class="air"/>
+		<a href ="#top"></a>
+		<!-- Radiobuttons and Checkboxes End-->
+	</section>
+	<!-- Responsive design start -->
+	<section>
+	  <h3 id="responsive">Responsive design</h3>
+	  <p>
+	    Whether the reader of the page is viewed by someone holding a small mobile og sitting behind a
+	    computer with a big screen, the content of the page should be easy to access. The main issue
+	    of resp design, is to create all pages for small screen, and use CSS for adjusting content for bigger screens.
+	    This framework is made with seperate CSS media queries in the CSS-file base.css. The base font-size is set in
+	    percent relative to the users browser / system. This makes it possible for each user to access the content of
+	    the page using his og hers prefered size settings. If setting size adjustments, use REM for changes of typography
+	    or elements related to font size, and use EM to adjust size of elements thats not relative to typography.
+	  </p>
+	  <p>
+	    The main size for the tag HTML in CSS is set to use a small mobile phone. There is seperate adjustments of the
+	    HTML-tag seperated with @media, that adjusts base fontsize relative to the size of the browser window.
+	  </p>
+	  <hr class="air" />
+	  <a href="#top"></a>
+	</section>
+	<!-- Responsive design end -->
+
     <!--table End-->
 
 	<section>
@@ -816,7 +855,8 @@
 
 	</section>
 
-    <!-- <section> -->
+
+	<!-- <section> -->
     <!-- <h3 id="Layouy">Layout</h3> -->
     <!-- <p> -->
     <!-- Base Layout system. contains a base 5 row and 9 column grid -->
@@ -830,6 +870,6 @@
     <!-- </div> -->
     <!-- <hr class="air" /> -->
     <!-- <a href="#top"></a> -->
-
     <!-- </section> -->
+
 </body>
