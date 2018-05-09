@@ -10,6 +10,7 @@
     "build": "brunch build --production"
   },
   "dependencies": {
+    "chartist": "^0.11.0",
     "lr-http-server": "^0.1.5"
   },
   "devDependencies": {
